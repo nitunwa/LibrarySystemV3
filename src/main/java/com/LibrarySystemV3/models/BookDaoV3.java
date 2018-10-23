@@ -10,8 +10,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @Transactional(readOnly=true)
-public class BookDao {
-
+public class BookDaoV3 {
+ 
 	@PersistenceContext
 	private EntityManager entityManager;
 

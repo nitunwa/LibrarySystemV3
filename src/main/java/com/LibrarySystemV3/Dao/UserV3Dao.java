@@ -20,6 +20,8 @@ public class UserV3Dao {
 	}
 	
 	public User getByEmail(String email) {
-		return (User) entityManager.createQuery("from UserV3 where emai= :Email").setParameter("Email", email).getSingleResult(); 
+		 
+		User user=  entityManager.createQuery("from User where email= :Email",User.class).setParameter("Email", email).getSingleResult();
+		return user;
 	}
 }
